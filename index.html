@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio em Manutenção</title>
+
+  <!-- Importando Google Fonts: Poppins Light 300 + Italic -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Importando Google Material Symbols (ícones como fonte) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <style>
+    /* Reset básico */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #dce6ec;
+    }
+
+    /* Fundo */
+    body {
+      background: url('IMG_3341.JPG') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    /* Container */
+    .content {
+      text-align: center;
+      margin-right: 100px; /* espaço da borda direita */
+    }
+
+    /* Nome (h1) destacado — escapa do limite */
+    h1 {
+      font-size: 4.4em;
+      font-weight: 900;
+      letter-spacing: 0px;
+      margin: 0 0 1px 0;
+      max-width: none;       /* remove limite */
+      width: max-content;    /* só o necessário pro texto */
+      margin-left: auto;     /* garante alinhamento à direita */
+      margin-right: auto;    /* centraliza horizontalmente dentro do content */
+    }
+
+    /* Cargo abaixo do nome */
+    .role {
+      font-size: 1.1em;
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 50px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Caixa preta transparente */
+    .box {
+      background-color: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: 0.9em;
+      font-weight: 600;
+      line-height: 1.5em;
+      margin: 0;
+    }
+
+    /* Links de CV */
+    .cv-links {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 50px 0;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cv-item a {
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cv-item .material-symbols-outlined {
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+
+    /* Aviso com Courier + animação */
+    .maintenance {
+      font-family: 'Courier New', monospace;
+      font-size: 1.5em;
+      margin-top: 60px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .dots {
+      display: inline-block;
+      width: 1.5em;
+      text-align: left;
+    }
+
+    .dots::after {
+      content: '';
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ''; }
+      33%  { content: '.'; }
+      66%  { content: '..'; }
+      100% { content: '...'; }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      body {
+        background: url('fundo-site-mobile.JPG') no-repeat center center fixed;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+      
+      .content {
+        margin: 0;
+        padding: 0 20px;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+      }
+      
+      h1 {
+        font-size: 2.8em;
+        font-weight: 900;
+        letter-spacing: -1px;
+        margin: 0 0 15px 0;
+        text-align: center;
+        width: 100%;
+        line-height: 1.1;
+      }
+      
+      .role {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 40px;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+      }
+      
+      .box {
+        background-color: rgba(0,0,0,0.4);
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+      }
+      
+      .box p {
+        font-size: 0.95em;
+        font-weight: 600;
+        line-height: 1.6em;
+        text-align: center;
+        margin: 0;
+      }
+      
+      .cv-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 30px 0;
+        width: 100%;
+        max-width: none;
+        flex-wrap: wrap;
+      }
+      
+      .cv-item a {
+        font-size: 0.85em;
+        font-weight: 700;
+      }
+      
+      .cv-item .material-symbols-outlined {
+        font-size: 3.5em;
+        margin-bottom: 8px;
+      }
+      
+      .maintenance {
+        font-family: 'Courier New', monospace;
+        font-size: 1.2em;
+        margin-top: 40px;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+        padding: 0 10px;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 12px;
+        padding: 25px 20px;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>GIOVANI AMORIM</h1>
+    <div class="role">Senior Content Strategist | Creative Writer | No-code</div>
+
+    <div class="box">
+      <p>
+        Fale comigo pelo <strong>(11) 98650-1499</strong> ou <strong>omgiovani@hotmail.com</strong>
+      </p>
+    </div>
+
+    <!-- Bloco dos CVs -->
+    <div class="cv-links">
+      <div class="cv-item">
+        <a href="https://docs.google.com/document/d/10W7c_UReou8PrBh5mENUmPy4BDIwl1IdAfwX3JszphA/export?format=docx" target="_blank">
+          <span class="material-symbols-outlined">description</span>
+          <div>CV (Português)</div>
+        </a>
+      </div>
+      <div class="cv-item">
+        <a href="https://docs.google.com/document/d/1JVeLJEUSNNVly_va0zm2fPLlJCBSMMBCJuwOAO7tqBw/export?format=docx" target="_blank">
+          <span class="material-symbols-outlined">description</span>
+          <div>CV (English)</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="box maintenance">
+      <strong>Portfólio em manutenção</strong><span class="dots"></span>
+    </div>
+  </div>
+</body>
+</html>
